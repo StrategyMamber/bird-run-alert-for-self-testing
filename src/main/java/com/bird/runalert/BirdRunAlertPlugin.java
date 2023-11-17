@@ -60,7 +60,7 @@ public class BirdRunAlertPlugin extends Plugin
 	@Subscribe
 	public void onChatMessage(ChatMessage message)
 	{
-		if ((message.getMessage().toLowerCase()).contains("bird houses are ready to be dismantled") && message.getType().toString().equals("CONSOLE")) {
+		if ((message.getMessage().toLowerCase()).contains("Your bird houses are ready to be dismantled.") && message.getType().toString().equals("CONSOLE")) {
 			InputStream fileStream = new BufferedInputStream(BirdRunAlertPlugin.class.getClassLoader().getResourceAsStream("bird_run_alert.wav"));
 			try (AudioInputStream sound = AudioSystem.getAudioInputStream(fileStream))
 			{
